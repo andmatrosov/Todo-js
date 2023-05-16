@@ -1,0 +1,167 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  font-family: "Raleway", sans-serif;
+  color: #1e1e1e;
+  height: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.header {
+  width: 100%;
+  padding: 10px 0;
+  -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+}
+.header > .container {
+  text-align: center;
+}
+.header-logo {
+  display: inline-block;
+  font-weight: 800;
+  margin: 0 auto;
+  font-size: 24px;
+}
+
+.btn {
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+}
+.btn-add {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50px;
+  height: 50px;
+  bottom: 20px;
+  right: 20px;
+  font-size: 24px;
+  font-weight: 600;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+  -webkit-transition: background-color 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: background-color 0.3s ease, -webkit-box-shadow 0.3s ease;
+  -o-transition: box-shadow 0.3s ease, background-color 0.3s ease;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease, -webkit-box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.btn-add:hover {
+  background-color: #fafafa;
+  -webkit-box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2);
+}
+.btn-popup {
+  background-color: #fff;
+  padding: 8px 15px;
+  -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+  -webkit-transition: background-color 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: background-color 0.3s ease, -webkit-box-shadow 0.3s ease;
+  -o-transition: box-shadow 0.3s ease, background-color 0.3s ease;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease, -webkit-box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.btn-popup:hover {
+  background-color: #fafafa;
+  -webkit-box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.popup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 15px;
+  width: 50%;
+  max-width: 400px;
+  min-width: 300px;
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+}
+.popup-wrapper {
+  position: absolute;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.popup-input {
+  width: 100%;
+  padding: 10px 15px;
+}
+.popup-btn {
+  margin: 0 auto;
+}
+
+.todo-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  gap: 10px;
+  padding: 20px 0;
+}
+.todo-list__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 20px;
+  gap: 10px;
+  -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+}
+.todo-list__item[data-status=true] > span {
+  color: grey;
+  text-decoration: line-through;
+}
+.todo-list__item span {
+  margin-right: auto;
+}/*# sourceMappingURL=style.css.map */
