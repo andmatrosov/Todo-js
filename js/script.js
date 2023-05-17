@@ -20,6 +20,7 @@
 			addTask(popupInput.value);
 			console.log(taskList);
 			closePopup();
+			popupInput.value = ''
 			generateList()
 		}
 	})
@@ -45,30 +46,7 @@
 	function generateList() {
 		const taskWrapper = document.querySelector('.todo-list')
 
-		taskWrapper.addEventListener('click', (event) => {
-			const target = event.target;
-			if (target.tagName === 'BUTTON') {
-				const taskItemId = target.parentElement.dataset.id;
-
-				if (target.dataset.action == 'done') {
-
-					setData(target)
-					taskDone(taskItemId);
-					return
-				}
-
-				if (target.dataset.action == 'undone') {
-					setData(target)
-					taskDone(taskItemId);
-					return
-
-				}
-
-				if (target.dataset.action == 'remove') {
-					taskRemove(taskItemId);
-				}
-			}
-		}, true);
+		taskWrapper.addEventListener('click', actionHandle, false);
 
 		taskWrapper.innerHTML = ''
 		taskList.forEach(({ text, status, id }) => {
@@ -87,8 +65,26 @@
 		})
 	}
 
+	function actionHandle(event) {
+		let target = event.target;
+		event.stopPropagation();
+		if (target.tagName === 'BUTTON') {
+			let taskItemId = target.parentElement.dataset.id;
+
+			console.log(target.dataset.action)
+			if (target.dataset.action === 'done' || target.dataset.action === 'done') {
+				setData(target)
+				taskDone(taskItemId);
+			}
+
+			if (target.dataset.action === 'remove') {
+				taskRemove(taskItemId);
+			}
+		}
+	}
+
 	function taskDone(id) {
-		const el = document.querySelector(`[data-id="${id}"]`)
+		let el = document.querySelector(`[data-id="${id}"]`)
 		let bool;
 		taskList.forEach(item => {
 			if (item.id == id) {
