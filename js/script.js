@@ -72,7 +72,7 @@
 			let taskItemId = target.parentElement.dataset.id;
 
 			console.log(target.dataset.action)
-			if (target.dataset.action === 'done' || target.dataset.action === 'done') {
+			if (target.dataset.action === 'done' || target.dataset.action === 'undone') {
 				setData(target)
 				taskDone(taskItemId);
 			}
